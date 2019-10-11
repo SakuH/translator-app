@@ -17,6 +17,8 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 
 
+
+
 import android.util.Log;
 
 public class JSONParser {
@@ -37,7 +39,7 @@ public class JSONParser {
             // defaultHttpClient
             DefaultHttpClient httpClient = new DefaultHttpClient();
             HttpPost httpPost = new HttpPost(url);
-
+            Log.d("JSONPARSE", url);
             HttpResponse httpResponse = httpClient.execute(httpPost);
             HttpEntity httpEntity = httpResponse.getEntity();
             is = httpEntity.getContent();
